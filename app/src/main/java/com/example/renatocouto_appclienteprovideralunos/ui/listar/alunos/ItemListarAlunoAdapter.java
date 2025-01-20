@@ -1,4 +1,4 @@
-package com.example.renatocouto_appclienteprovideralunos.ui.listar;
+package com.example.renatocouto_appclienteprovideralunos.ui.listar.alunos;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,7 +26,7 @@ public class ItemListarAlunoAdapter extends RecyclerView.Adapter<ItemListarAluno
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_disciplina_card, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_alunos_card, parent, false);
         return new ViewHolder(view);
     }
 

@@ -1,4 +1,4 @@
-package com.example.renatocouto_appclienteprovideralunos.ui.listar;
+package com.example.renatocouto_appclienteprovideralunos.ui.listar.alunos;
 
 import android.app.AlertDialog;
 import android.content.ContentResolver;
@@ -24,7 +24,7 @@ import com.example.renatocouto_appclienteprovideralunos.ui.cadastra.CadastrarFra
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListarFragment extends Fragment {
+public class ListarAlunosFragment extends Fragment {
 
     public static final Uri URI_ALUNOS = Uri.parse(
             "content://com.example.renatocouto_appprovideralunos.provider/alunos");
@@ -33,12 +33,12 @@ public class ListarFragment extends Fragment {
     private ProgressBar progressBar;
     private TextView textViewProgress;
 
-    public ListarFragment() {
+    public ListarAlunosFragment() {
 
     }
 
-    public static ListarFragment newInstance() {
-        return new ListarFragment();
+    public static ListarAlunosFragment newInstance() {
+        return new ListarAlunosFragment();
     }
 
     @Override
@@ -50,7 +50,7 @@ public class ListarFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_listar, container, false);
+        View view = inflater.inflate(R.layout.fragment_listar_aluno, container, false);
 
         inicializarViews(view);
 
@@ -60,9 +60,9 @@ public class ListarFragment extends Fragment {
     }
 
     private void inicializarViews(View view) {
-        progressBar = view.findViewById(R.id.progress_circular);
+        progressBar = view.findViewById(R.id.media_progress_circular);
         recyclerViewAluno = view.findViewById(R.id.recyclerViewAluno);
-        textViewProgress = view.findViewById(R.id.tv_carregando);
+        textViewProgress = view.findViewById(R.id.tv_media_carregando);
     }
 
     private void carregarAlunos() {

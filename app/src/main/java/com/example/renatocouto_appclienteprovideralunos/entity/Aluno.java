@@ -16,6 +16,16 @@ public class Aluno implements Serializable {
     private int idade;
     private double nota1, nota2, nota3;
 
+    public String getStatus() {
+        if (getMedia() >= 6.0) {
+            return "aprovado";
+        } else return "reprovado";
+    }
+
+    public double getMedia() {
+        return (nota1 + nota2 + nota3) / 3;
+    }
+
     public long getId() {
         return id;
     }

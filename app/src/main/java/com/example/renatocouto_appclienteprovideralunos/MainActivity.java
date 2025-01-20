@@ -11,7 +11,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.example.renatocouto_appclienteprovideralunos.ui.cadastra.CadastrarFragment;
-import com.example.renatocouto_appclienteprovideralunos.ui.listar.ListarFragment;
+import com.example.renatocouto_appclienteprovideralunos.ui.home.HomeFragment;
+import com.example.renatocouto_appclienteprovideralunos.ui.listar.alunos.ListarAlunosFragment;
+import com.example.renatocouto_appclienteprovideralunos.ui.listar.medias.ListarMediasFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -39,12 +41,21 @@ public class MainActivity extends AppCompatActivity {
         botaoSair = findViewById(R.id.btn_sair);
         bottomNavigationView = findViewById(R.id.nav_view);
         textTitulo = findViewById(R.id.txt_titulo_toolbar);
+        botaoHome = findViewById(R.id.btn_home);
 
     }
 
     private void configurarCliques() {
         configurarBotaoSair();
         configurarBottomNavigation();
+        ouvinteCliqueMenuHome();
+    }
+
+    private void ouvinteCliqueMenuHome() {
+        botaoHome.setOnClickListener(view -> {
+            HomeFragment homeFragment = new HomeFragment();
+            iniciarFragment(homeFragment, R.string.cliente_aluno);
+        });
     }
 
     private void iniciarFragment(Fragment fragment, int titulo) {
@@ -54,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
                 .addToBackStack(null)
                 .commit();
 
+        atualizarTitulo(titulo);
+    }
+
+    public void atualizarTitulo(int titulo) {
         textTitulo.setText(titulo);
     }
 
@@ -70,7 +85,13 @@ public class MainActivity extends AppCompatActivity {
         }
         if (itemMenu.getItemId() == R.id.menu_listar) {
 
-            iniciarFragment(ListarFragment.newInstance(), R.string.listar);
+            iniciarFragment(ListarAlunosFragment.newInstance(), R.string.listar);
+
+            return true;
+        }
+        if (itemMenu.getItemId() == R.id.menu_medias) {
+
+            iniciarFragment(ListarMediasFragment.newInstance(), R.string.media);
 
             return true;
         }

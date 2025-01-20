@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="8dp"
-    tools:context=".ui.listar.ListarFragment">
+    tools:context=".ui.listar.alunos.ListarAlunosFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewAluno"
@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <ProgressBar
-        android:id="@+id/progress_circular"
+        android:id="@+id/media_progress_circular"
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,14 +24,14 @@
         app:layout_constraintTop_toBottomOf="@+id/recyclerViewAluno" />
 
     <TextView
-        android:id="@+id/tv_carregando"
+        android:id="@+id/tv_media_carregando"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/carregando"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progress_circular" />
+        app:layout_constraintTop_toBottomOf="@+id/media_progress_circular" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

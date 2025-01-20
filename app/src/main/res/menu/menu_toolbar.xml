@@ -8,4 +8,9 @@
         android:id="@+id/menu_listar"
         android:icon="@drawable/checklist_24"
         android:title="@string/listar" />
+
+    <item
+        android:id="@+id/menu_medias"
+        android:icon="@drawable/available_24"
+        android:title="@string/media" />
 </menu>
