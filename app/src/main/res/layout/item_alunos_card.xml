@@ -135,7 +135,7 @@
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="@string/editar_disciplina"
+                    android:contentDescription="@string/editar_cadastro"
                     android:padding="4dp"
                     android:src="@drawable/ic_edit" />
 
@@ -144,7 +144,7 @@
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="@string/excluir_disciplina"
+                    android:contentDescription="@string/excluir_aluno"
                     android:padding="4dp"
                     android:src="@drawable/ic_delete" />
             </LinearLayout>

@@ -4,7 +4,6 @@
     <string name="cliente_aluno">Cliente Aluno</string>
     <string name="cadastrar">Cadastrar</string>
     <string name="listar">Listar</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="descricao_btn_home">Volar para pagína principal</string>
     <string name="salvar">Salvar</string>
     <string name="limpar">Limpar</string>
@@ -14,8 +13,8 @@
     <string name="alunos">Aluno</string>
     <string name="notas">Notas</string>
     <string name="ac_es">Acões</string>
-    <string name="editar_disciplina">Editar disciplina</string>
-    <string name="excluir_disciplina">Excluir disciplina</string>
+    <string name="editar_cadastro">Editar cadastro</string>
+    <string name="excluir_aluno">Excluir aluno</string>
     <string name="carregando">carregando</string>
     <string name="sem_aluno_cadastrado">Sem aluno cadastrado</string>
     <string name="confirmar_exclusao">Confirmar Exclusão</string>

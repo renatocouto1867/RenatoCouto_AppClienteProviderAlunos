@@ -58,17 +58,16 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void iniciarFragment(Fragment fragment, int titulo) {
+    public void iniciarFragment(Fragment fragment, int titulo) {
 
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragment_container, fragment)
                 .addToBackStack(null)
                 .commit();
-
         atualizarTitulo(titulo);
     }
 
-    public void atualizarTitulo(int titulo) {
+    private void atualizarTitulo(int titulo) {
         textTitulo.setText(titulo);
     }
 

@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -18,7 +17,6 @@ import com.example.renatocouto_appclienteprovideralunos.R;
 import com.example.renatocouto_appclienteprovideralunos.auxiliar.Mensagens;
 import com.example.renatocouto_appclienteprovideralunos.entity.Aluno;
 import com.example.renatocouto_appclienteprovideralunos.ui.listar.alunos.ListarAlunosFragment;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 /**
  * Fragment para cadastro de alunos.
@@ -135,8 +133,7 @@ public class CadastrarFragment extends Fragment {
             Mensagens.showErro(requireView(), getString(R.string.insira_valores_v_lidos_para_idade_e_notas));
             return;
         }
-
-        iniciarFragment(ListarAlunosFragment.newInstance(), R.string.listar);
+        iniciarFragamentList();
 
     }// salvar
 
@@ -183,14 +180,11 @@ public class CadastrarFragment extends Fragment {
         editTextNome.requestFocus();
     }
 
-    private void iniciarFragment(Fragment fragment, int titulo) {
-
-        ((MainActivity) getActivity()).atualizarTitulo(Integer.parseInt(getString(titulo)));
-
-        requireActivity().getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragment_container, fragment)
-                .addToBackStack(null)
-                .commit();
-
+    private void iniciarFragamentList() {
+        Fragment fragment = ListarAlunosFragment.newInstance();
+        MainActivity activity = (MainActivity) getActivity();
+        if (activity != null) {
+            activity.iniciarFragment(fragment, R.string.listar);
+        }
     }
 }
