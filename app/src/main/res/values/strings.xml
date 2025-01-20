@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">RenatoCouto_AppProviderAlunos</string>
+    <string name="sair">Sair</string>
+    <string name="cliente_aluno">Cliente Aluno</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="listar">Listar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="salvar">Salvar</string>
+    <string name="limpar">Limpar</string>
+    <string name="insira_valores_v_lidos_para_idade_e_notas">Insira valores válidos para idade e notas.</string>
+    <string name="aluno_salvo_com_sucesso">Aluno salvo com sucesso!</string>
+    <string name="por_favor_preencha_todos_os_campos">Por favor, preencha todos os campos.</string>
+    <string name="alunos">Alunos</string>
+    <string name="notas">Notas</string>
+    <string name="ac_es">Acões</string>
+    <string name="editar_disciplina">Editar disciplina</string>
+    <string name="excluir_disciplina">Excluir disciplina</string>
+    <string name="carregando">carregando</string>
+    <string name="sem_aluno_cadastrado">Sem aluno cadastrado</string>
+    <string name="confirmar_exclusao">Confirmar Exclusão</string>
+    <string name="realmente_deseja_deletar">"Você realmente deseja deletar o aluno: "</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="deletar">deletar</string>
+    <string name="aluno_deletado_com_sucesso">Aluno deletado com sucesso!</string>
+    <string name="falha_na_operao">Falha na operação</string>
+    <string name="falha_ao_deletar_o_aluno">Falha ao deletar o aluno</string>
+
+</resources>

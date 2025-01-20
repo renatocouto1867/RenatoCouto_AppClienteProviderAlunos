@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_cadastrar"
+        android:icon="@drawable/person_add_24"
+        android:title="@string/cadastrar" />
+    <item
+        android:id="@+id/menu_listar"
+        android:icon="@drawable/checklist_24"
+        android:title="@string/listar" />
+</menu>
