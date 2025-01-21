@@ -17,9 +17,11 @@
 
     <ProgressBar
         android:id="@+id/media_progress_circular"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:visibility="visible"
+        style="@android:style/Widget.ProgressBar.Small"
+        android:indeterminateTint="@color/primaryColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
