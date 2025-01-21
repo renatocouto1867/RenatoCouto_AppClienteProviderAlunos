@@ -9,8 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.renatocouto_appclienteprovideralunos.entity.Aluno;
 import com.example.renatocouto_appclienteprovideralunos.R;
+import com.example.renatocouto_appclienteprovideralunos.entity.Aluno;
 
 import java.util.List;
 
@@ -35,7 +35,7 @@ public class ItemListarAlunoAdapter extends RecyclerView.Adapter<ItemListarAluno
         Aluno aluno = alunos.get(position);
 
         holder.textViewNome.setText(aluno.getNome());
-        holder.textViewIdade.setText("Idade: "+aluno.getIdade());
+        holder.textViewIdade.setText("Idade: " + aluno.getIdade());
         holder.textViewNota1.setText(String.format("%.2f", aluno.getNota1()));
         holder.textViewNota2.setText(String.format("%.2f", aluno.getNota2()));
         holder.textViewNota3.setText(String.format("%.2f", aluno.getNota3()));

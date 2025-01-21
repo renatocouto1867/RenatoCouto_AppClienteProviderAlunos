@@ -10,12 +10,15 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.example.renatocouto_appclienteprovideralunos.MainActivity;
 import com.example.renatocouto_appclienteprovideralunos.R;
 import com.example.renatocouto_appclienteprovideralunos.auxiliar.Mensagens;
 import com.example.renatocouto_appclienteprovideralunos.entity.Aluno;
+import com.example.renatocouto_appclienteprovideralunos.notificacao.NotificationHelper;
+import com.example.renatocouto_appclienteprovideralunos.notificacao.PermissionHelper;
 import com.example.renatocouto_appclienteprovideralunos.ui.listar.alunos.ListarAlunosFragment;
 
 /**
@@ -23,6 +26,9 @@ import com.example.renatocouto_appclienteprovideralunos.ui.listar.alunos.ListarA
  */
 public class CadastrarFragment extends Fragment {
     private boolean isEdicao = false;
+
+    private NotificationHelper noticationHelper;
+    private PermissionHelper permissionHelper;
 
 
     private Aluno aluno;
@@ -60,6 +66,10 @@ public class CadastrarFragment extends Fragment {
         inicializarViews(view);
         configurarBotoes();
         inicializaArguments();
+        noticationHelper = new NotificationHelper(view.getContext());
+        permissionHelper = new PermissionHelper((AppCompatActivity) requireActivity(), noticationHelper);
+
+        permissionHelper.verificaPermissao();
         return view;
     }
 
@@ -146,6 +156,7 @@ public class CadastrarFragment extends Fragment {
         );
 
         if (uri != null) {
+            gerar(getString(R.string.um_novo_aluno_foi_salvo));
             Mensagens.showSucesso(requireView(), getString(R.string.aluno_salvo_com_sucesso));
 
         } else {
@@ -161,6 +172,7 @@ public class CadastrarFragment extends Fragment {
         int linhasAtualizadas = requireContext().getContentResolver().update(uri, values, null, null);
 
         if (linhasAtualizadas > 0) {
+            gerar(getString(R.string.o_aluno) + nome + getString(R.string.foi_editado));
             Mensagens.showSucesso(requireView(), getString(R.string.aluno_salvo_com_sucesso));
         } else {
             Mensagens.showErro(requireView(), getString(R.string.falha_na_operao));
@@ -187,4 +199,14 @@ public class CadastrarFragment extends Fragment {
             activity.iniciarFragment(fragment, R.string.listar);
         }
     }
+
+    public void gerar(String mensagem) {
+        if (permissionHelper.temPermissao()) {
+            noticationHelper.gerarNotificacao(mensagem);
+        } else {
+            permissionHelper.solicitaPermissao();
+        }
+    }
+
+
 }

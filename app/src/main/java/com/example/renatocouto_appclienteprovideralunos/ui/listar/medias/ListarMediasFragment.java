@@ -16,7 +16,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.renatocouto_appclienteprovideralunos.R;
 import com.example.renatocouto_appclienteprovideralunos.entity.Aluno;
-import com.example.renatocouto_appclienteprovideralunos.ui.cadastra.CadastrarFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -98,8 +97,8 @@ public class ListarMediasFragment extends Fragment {
     }
 
     private void exibirProgresso(boolean exibir) {
-        progressBar.setVisibility(exibir?View.VISIBLE:View.GONE);
-        textViewProgress.setVisibility(exibir?View.VISIBLE:View.GONE);
+        progressBar.setVisibility(exibir ? View.VISIBLE : View.GONE);
+        textViewProgress.setVisibility(exibir ? View.VISIBLE : View.GONE);
     }
 
     private void configurarRecyclerView(List<Aluno> alunoList) {

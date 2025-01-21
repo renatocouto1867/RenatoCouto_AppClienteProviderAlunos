@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:layout_margin="8dp"
+    android:layout_margin="6dp"
     cardview:cardCornerRadius="8dp"
     cardview:cardElevation="4dp">
 
@@ -58,14 +58,14 @@
             android:orientation="horizontal">
 
             <!--aluno-->
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tv_media_aluno"
-                    style="@style/RotuloListaAlunos"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:gravity="center"
-                    tools:text="Jose" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_media_aluno"
+                style="@style/RotuloListaAlunos"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                tools:text="Jose" />
 
             <!--notas-->
             <androidx.appcompat.widget.AppCompatTextView
@@ -85,6 +85,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:paddingEnd="3dp"
                 tools:text="aprovado" />
 
         </LinearLayout>

@@ -15,12 +15,14 @@ import com.example.renatocouto_appclienteprovideralunos.ui.home.HomeFragment;
 import com.example.renatocouto_appclienteprovideralunos.ui.listar.alunos.ListarAlunosFragment;
 import com.example.renatocouto_appclienteprovideralunos.ui.listar.medias.ListarMediasFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+//<a href="https://www.flaticon.com/free-icons/student" title="student icons">Student icons created by Nikita Golubev - Flaticon</a>
 
 public class MainActivity extends AppCompatActivity {
     private ImageButton botaoHome;
     private ImageButton botaoSair;
     private BottomNavigationView bottomNavigationView;
     private TextView textTitulo;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,5 +103,6 @@ public class MainActivity extends AppCompatActivity {
     private void configurarBottomNavigation() {
         bottomNavigationView.setOnItemSelectedListener(item -> tratarCliqueMenu(item));
     }
+
 
 }

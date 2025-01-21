@@ -15,6 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <include
             android:id="@+id/incluir_toolbar"
             layout="@layout/toolbar"
@@ -39,15 +40,15 @@
         android:id="@+id/nav_view"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
-        android:background="@color/gray_200"
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
+        android:background="@color/gray_200"
+        app:itemBackground="@color/gray_200"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@color/black"
+        app:labelVisibilityMode="unlabeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:itemIconTint="@color/black"
-        app:itemBackground="@color/gray_200"
-        app:labelVisibilityMode="unlabeled"
-        app:itemIconSize="30dp"
         app:menu="@menu/menu_toolbar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

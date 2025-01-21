@@ -26,5 +26,8 @@
     <string name="falha_ao_deletar_o_aluno">Falha ao deletar o aluno</string>
     <string name="media">Média</string>
     <string name="status">Status</string>
+    <string name="um_novo_aluno_foi_salvo">Um novo Aluno foi salvo!</string>
+    <string name="foi_editado">" foi editado"</string>
+    <string name="o_aluno">"o Aluno "</string>
 
 </resources>
